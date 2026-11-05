@@ -1,0 +1,16 @@
+# 파이썬 가상환경
+.venv/
+
+# 로그인 세션·공유 비밀번호·설정 등 이 PC 전용 데이터 (통째로 제외)
+data/
+
+# 실행 파일(용량 큼, 각자 내려받음)
+tools/cloudflared.exe
+tools/*.exe
+
+# 파이썬 캐시
+__pycache__/
+*.pyc
+
+# 테스트용 이미지
+*.png

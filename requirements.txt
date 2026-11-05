@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+playwright
+claude-agent-sdk
+python-multipart
+pyyaml

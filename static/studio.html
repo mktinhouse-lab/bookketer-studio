@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>북케터밈 카드뉴스 스튜디오</title>
+<link rel="stylesheet" href="/static/studio.css">
+<link rel="stylesheet" href="/static/cardtpl.css">
+</head>
+<body>
+<header>
+  <div class="top">
+    <a class="logo" href="#/">밈</a>
+    <div class="brand"><h1>북케터밈 카드뉴스</h1><small>@bookketer_mim 책 추천 카드뉴스 스튜디오</small></div>
+    <nav class="steps" id="steps"></nav>
+    <div class="pills" id="pills"></div>
+    <div class="menu"><a class="btn sm" href="#/">새로 만들기</a><a class="btn sm" href="#/works">작업 목록</a><a class="btn sm" href="#/learn">학습·연결</a></div>
+  </div>
+</header>
+
+<main id="view-learn" hidden>
+  <section class="sec">
+    <h2>연결</h2>
+    <p class="hint">AI 분석·생성은 <b>Claude 로그인</b>으로 돌아가요. 보안상 이 프로그램에는 <b>북케터밈 계정 키·로그인을 저장하지 않아요</b>(예약 발행 없음). 완성한 PNG는 직접 올려 주세요.</p>
+    <div class="grid2">
+      <div class="conn" id="c-claude"><h3><i></i>Claude 구독 로그인</h3><p id="c-claude-t">확인 중…</p>
+        <div class="row"><button class="btn sm" id="b-claude">Claude 로그인</button></div></div>
+      <div class="conn" id="c-share"><h3><i></i>팀 공유 링크</h3><p id="c-share-t">확인 중…</p>
+        <div class="row"><input type="text" id="i-sharepw" placeholder="공유 비밀번호(4글자 이상)" autocomplete="off"><button class="btn sm" id="b-sharepw">비밀번호 정하기</button></div>
+        <div class="row"><button class="btn sm pri" id="b-share-on">공유 켜기</button><button class="btn sm" id="b-share-off">공유 끄기</button></div>
+        <details class="more" id="ngrok-box"><summary>고정 주소(ngrok) 설정</summary>
+          <p class="hint">ngrok 화면의 <b>Your Authtoken</b>과 <b>Domains</b>에 나온 고정 도메인을 넣으면, 프로그램을 켤 때마다 같은 주소로 공유가 자동으로 켜져요. 토큰은 ngrok 설정에만 저장돼요.</p>
+          <div class="row"><input type="password" id="i-ngrok-token" placeholder="ngrok Authtoken" autocomplete="off" style="flex:1"></div>
+          <div class="row"><input type="text" id="i-ngrok-domain" placeholder="고정 도메인 (예: abc-def.ngrok-free.app)" style="flex:1"><button class="btn sm" id="b-ngrok">저장</button></div>
+        </details></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>0단계 · 북케터밈 학습</h2>
+    <p class="hint">북케터밈 캐러셀(카드뉴스) 학습 데이터예요. 스타일 가이드와 사용한 책 DB가 2~4단계에 자동으로 적용돼요.</p>
+    <div class="stats" id="stats"></div>
+    <div class="row">
+      <span class="hint"><b>새 게시물 반영(학습 업데이트)</b>은 Claude 대화창에 "북케터밈 학습 업데이트 해줘"라고 하면 돼요. 계정 키를 이 프로그램에 두지 않기 위해서예요.</span>
+      <button class="btn" id="b-run" hidden>학습 시작</button><button class="btn" id="b-update" hidden>학습 업데이트</button>
+      <button class="btn danger" id="b-stop" hidden>멈추기</button>
+      <span class="hint" id="folder"></span>
+    </div>
+    <div id="jobbox" hidden>
+      <div class="jobline"><b id="job-label"></b><span class="hint" id="job-time"></span></div>
+      <div class="bar"><div id="job-bar"></div></div>
+      <div class="log" id="job-log"></div>
+    </div>
+    <details class="more"><summary>한 단계씩 따로 돌리기</summary>
+      <div class="row">
+        <button class="btn sm" data-act="analyze">분석만 (안 된 것)</button>
+        <button class="btn sm" data-act="guide">스타일 가이드 새 버전 만들기</button>
+      </div>
+    </details>
+  </section>
+
+  <section class="sec">
+    <h2>스타일 가이드</h2>
+    <p class="hint">확인하고 고쳐 주세요. 수정본은 덮어쓰지 않고 새 버전으로 저장되고, 기본으로 <b>최신 버전</b>이 2·4·5·6단계에 적용됩니다. 특정 버전을 고정할 수도 있어요.</p>
+    <div class="guidebar">
+      <select id="g-sel"></select>
+      <span id="g-applied"></span>
+      <button class="btn sm" id="g-edit">수정</button>
+      <button class="btn sm pri" id="g-save" hidden>새 버전으로 저장</button>
+      <button class="btn sm" id="g-cancel" hidden>취소</button>
+      <button class="btn sm" id="g-pin">이 버전 고정 적용</button>
+      <button class="btn sm" id="g-unpin">최신 자동 적용</button>
+    </div>
+    <div id="g-view" class="md"><div class="empty">아직 가이드가 없습니다. 학습을 돌리면 초안이 여기에 나옵니다.</div></div>
+    <textarea id="g-text" hidden></textarea>
+  </section>
+
+  <section class="sec">
+    <h2>수집한 게시물 <span class="hint" id="p-count"></span></h2>
+    <div class="filter">
+      <input type="text" id="p-q" placeholder="카피·책 제목 검색">
+      <select id="p-sort"><option value="date">최신순</option><option value="likes">좋아요순</option><option value="saved">저장순</option><option value="shares">공유순</option></select>
+      <select id="p-kind"><option value="">모든 종류</option></select>
+    </div>
+    <div class="posts" id="posts"></div>
+  </section>
+
+  <section class="sec">
+    <h2>사용한 책 DB <span class="hint" id="b-count"></span></h2>
+    <p class="hint">3단계 책 추천에서 '사용함'으로 표시됩니다. 발행한 게시물의 책은 자동으로 추가됩니다.</p>
+    <input type="text" id="b-q" placeholder="책 제목·저자 검색">
+    <div id="books"></div>
+  </section>
+</main>
+
+<main id="view-home" hidden>
+  <section class="sec hero">
+    <h2>새 카드뉴스 만들기</h2>
+    <p class="hint">잘된 레퍼런스 링크를 넣으면 이미지·캡션·반응을 가져오고, AI가 썸네일 카피와 장 구성을 읽어 둡니다. 북케터밈 학습(스타일 가이드)은 뒤에서 자동으로 적용돼요.</p>
+    <p class="hint">구성: 썸네일 1장 + 책 소개(3단계에서 고른 권수만큼, 3~5장) + CTA 1장</p>
+    <div class="urls">
+      <input type="text" class="ref-url" placeholder="레퍼런스 인스타 게시물 링크 1 (https://www.instagram.com/p/…)">
+      <input type="text" class="ref-url" placeholder="링크 2 (선택)">
+      <input type="text" class="ref-url" placeholder="링크 3 (선택)">
+    </div>
+    <div class="row"><button class="btn pri" id="b-start">레퍼런스 가져오기 →</button>
+      <button class="btn" id="b-start-upload">링크 없이 이미지·카피 직접 넣기</button>
+      <span class="hint" id="guide-applied"></span></div>
+  </section>
+  <section class="sec"><div class="sechead"><h2>이어서 하기 <span class="hint">완성 전 작업</span></h2>
+      <div class="selbar"><button class="btn sm" data-sel="recent">선택</button></div></div>
+    <div class="wgrid big" id="recent"></div></section>
+  <section class="sec" id="all-works"><div class="sechead"><h2>작업 목록 <span class="hint" id="works-n"></span></h2>
+      <div class="selbar"><input type="text" id="w-search" placeholder="카피로 찾기" style="width:180px">
+        <button class="btn sm" data-sel="home-works">선택</button><button class="btn sm" id="b-trash">휴지통</button></div></div>
+    <div class="wgrid" id="home-works"></div>
+    <div id="trash-box" hidden></div></section>
+</main>
+
+<main id="view-works" hidden>
+  <section class="sec"><h2>작업 목록</h2><p class="hint">카드뉴스 1건 = 폴더 1개(<code>작업/</code>). 카드를 누르면 이어서 하고, 아래 파일 이름을 누르면 단계별 기록을 볼 수 있어요.</p><div class="wgrid" id="works"></div></section>
+</main>
+
+<main id="view-work" hidden>
+  <div class="workhead"><div><b id="w-title"></b> <span class="hint" id="w-meta"></span></div>
+    <div class="row" style="margin:0"><span class="hint" id="w-folder"></span>
+      <button class="btn sm" id="b-open-folder">폴더 열기</button><button class="btn sm" id="b-dup">이 작업 복제</button><button class="btn sm danger" id="b-del-work">삭제</button></div></div>
+  <section class="sec" id="step1">
+    <h2>1단계 · 레퍼런스</h2>
+    <p class="hint">AI가 읽은 썸네일 카피와 장 구성이 틀렸으면 고쳐 주세요. 링크가 막히면 이미지를 직접 올리거나 카피만 입력해도 됩니다.</p>
+    <div id="refjob" hidden><div class="jobline"><b id="refjob-label"></b><span class="hint" id="refjob-time"></span></div><div class="bar"><div id="refjob-bar"></div></div></div>
+    <div id="refs"></div>
+    <details class="more" id="addref"><summary>레퍼런스 추가하기 (최대 3개)</summary>
+      <div class="row"><input type="text" id="add-url" placeholder="인스타 게시물 링크" style="flex:1"><button class="btn sm" id="b-add-url">가져오기</button></div>
+      <div class="upbox">
+        <b>링크 없이 직접 넣기</b>
+        <div class="row"><input type="file" id="up-files" accept="image/*" multiple><span class="hint">카드 이미지를 순서대로(여러 장 선택)</span></div>
+        <textarea id="up-copy" placeholder="썸네일 카피(줄바꿈 그대로). 이미지가 없으면 이것만 넣어도 됩니다" style="min-height:70px"></textarea>
+        <textarea id="up-caption" placeholder="캡션(선택)" style="min-height:60px"></textarea>
+        <div class="row"><input type="text" id="up-url" placeholder="원본 링크(선택)" style="flex:1"><button class="btn sm" id="b-upload">올리기</button></div>
+      </div>
+    </details>
+    <div class="row end"><button class="btn" id="b-refs-save">고친 내용 저장</button><button class="btn pri" id="b-refs-next">이 레퍼런스로 2단계 →</button></div>
+  </section>
+  <section class="sec" id="step2" hidden>
+    <h2>2단계 · 썸네일 카피 10개</h2>
+    <p class="hint">레퍼런스가 잘된 이유 + 북케터밈 스타일 가이드 + 지난 피드백 규칙으로 뽑아요. 하나를 골라 고치거나, 마음에 드는 건 📌고정하고 나머지만 다시 뽑을 수 있어요.</p>
+    <div id="copyjob" hidden><div class="jobline"><b id="copyjob-label"></b><span class="hint" id="copyjob-time"></span></div><div class="bar"><div id="copyjob-bar"></div></div></div>
+    <div id="copy-analysis"></div>
+    <div class="copycols"><div><h3>베리에이션 <span class="hint">레퍼런스 구조 유지 · 표현만 바꿈</span></h3><div id="copy-var"></div></div>
+      <div><h3>디벨롭 <span class="hint">각도를 넓힘</span></h3><div id="copy-dev"></div></div></div>
+    <div class="row"><button class="btn" id="b-copy-regen">📌고정한 것 빼고 다시 뽑기</button><span class="hint" id="copy-reco"></span></div>
+    <div class="chosen" id="copy-edit" hidden>
+      <div class="thumbprev"><div class="l1" id="pv1"></div><div class="l2" id="pv2"></div></div>
+      <div class="chosen-f">
+        <b>고른 카피 고치기</b>
+        <label>1줄<input type="text" id="ed1"></label>
+        <label>2줄<input type="text" id="ed2"></label>
+        <span class="hint" id="ed-device"></span>
+        <div class="row end"><button class="btn pri" id="b-copy-next">이 카피로 3단계 →</button></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="step3" hidden>
+    <h2>3단계 · 책 추천 <span class="hint" id="bk-count"></span></h2>
+    <p class="hint">AI가 웹 검색으로 베스트셀러 라인 위주의 후보를 고르고, 알라딘 상품 페이지에서 실제로 확인한 책만 남겨요. 수치마다 출처 링크가 있고, 페이지에 없는 값은 '확인 불가'로 둡니다.</p>
+    <div id="bookjob" hidden><div class="jobline"><b id="bookjob-label"></b><span class="hint" id="bookjob-time"></span></div><div class="bar"><div id="bookjob-bar"></div></div></div>
+    <div class="row">
+      <label class="ck"><input type="checkbox" id="bk-pilotic"> 필로틱 도서 1권 포함</label>
+      <button class="btn" id="b-book-regen">선택한 책은 두고 나머지 다시 추천</button>
+      <span class="grow"></span>
+      <input type="text" id="bk-q" placeholder="책 제목으로 직접 찾기" style="width:220px"><button class="btn sm" id="b-bk-search">찾기</button>
+    </div>
+    <div id="bk-results"></div>
+    <div class="books-grid" id="books-grid"></div>
+    <div class="row end"><span class="hint" id="bk-need"></span><button class="btn pri" id="b-books-next">이 책들로 4단계 →</button></div>
+  </section>
+  <section class="sec" id="step4" hidden>
+    <h2>4단계 · 카드 완성 <span class="hint">설명글·캡션 · 배경 · 편집이 자동으로 채워져요. 고칠 곳만 고치고 PNG로 내보내세요.</span></h2>
+    <div id="cardjob" hidden><div class="jobline"><b id="cardjob-label"></b><span class="hint" id="cardjob-time"></span></div><div class="bar"><div id="cardjob-bar"></div></div></div>
+    <div id="cards-empty" class="empty" hidden></div>
+    <div class="editor" id="editor" hidden>
+      <div class="ed-strip" id="ed-strip"></div>
+      <div class="ed-stage"><div class="ed-frame" id="ed-frame"></div><div class="hint" id="ed-pos"></div></div>
+      <div class="ed-panel" id="ed-panel"></div>
+    </div>
+    <div class="ed-bottom" id="ed-bottom" hidden>
+      <div class="fcbox" id="fc-box"></div>
+      <label class="fl">캡션 <span class="hint" id="cap-n"></span><textarea id="ed-caption" style="min-height:220px"></textarea></label>
+      <div class="row end"><span class="hint" id="ed-saved"></span>
+        <button class="btn" id="b-factcheck">사실 검증 다시 하기</button>
+        <button class="btn" id="b-rebuild">처음부터 다시 자동 제작</button>
+        <button class="btn pri" id="b-export">PNG로 내보내기</button></div>
+      <div id="export-result"></div>
+    </div>
+  </section>
+  <section class="sec" id="stepN" hidden><h2 id="stepN-title"></h2><div class="empty" id="stepN-body"></div></section>
+</main>
+
+<dialog id="dlg"><div class="dlg-h"><b id="dlg-t"></b><button class="btn sm" id="dlg-x">닫기</button></div><div class="dlg-b" id="dlg-b"></div></dialog>
+<div class="toast" id="toast"></div>
+<script src="/static/cardtpl.js"></script>
+<script src="/static/studio.js"></script>
+<script src="/static/studio_work.js"></script>
+</body>
+</html>

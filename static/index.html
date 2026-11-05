@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>북케터 밈 카드뉴스 스튜디오</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/vendor/fabric.min.js"></script>
+</head>
+<body>
+<header><div class="top">
+  <div class="logo">밈</div>
+  <div><h1>북케터 밈 카드뉴스 스튜디오</h1><small>레퍼런스 → 기획 → 썸네일 편집 → 저장</small></div>
+  <div id="jobs" title="진행 중인 작업 — 누르면 그 작업으로 갑니다"></div>
+  <button class="btn sm pri hidden" id="btn-claude-top" title="AI 기능(기획·책 찾기·베리에이션·팩트체크)을 쓰려면 한 번 로그인해야 해요">🔑 Claude 로그인 창 열기</button>
+  <span class="badge no hidden" id="claude-remote" title="로그인 창은 서버가 켜진 PC 화면에 떠요">Claude 미연결 — 서버 PC에서 로그인 필요</span>
+  <button class="btn sm hidden" id="btn-share" title="팀원과 함께 쓰는 링크">🔗 공유</button>
+  <span class="badge ok hidden" id="remote-badge" title="프로그램이 켜진 PC 에 공유 링크로 들어와 있습니다">🔗 공유 링크로 접속 중</span>
+  <nav><button id="t-work" class="on">작업</button><button id="t-lib">작업 보관함</button><button id="t-files">결과 보기</button></nav>
+</div></header>
+
+<main>
+<div id="v-work">
+  <!-- 1. 알릴 내용 · 형식 -->
+  <div class="step">
+    <h2><i>1</i>알릴 내용 · 형식 선택</h2>
+    <div class="fmtgrid" id="formats"></div>
+    <div class="fmtbox hidden" id="fmt-books">
+      <div class="bfind">
+        <div class="row">
+          <label class="fl grow">썸네일 카피 또는 장르 <small>(정해 둔 카피가 있으면 그대로 1번 후보 표지로 써요)</small>
+            <input type="text" id="pj-thumb" placeholder="예) 결말 알고 나면 소름 돋는 한국 소설 · 또는 그냥 '힐링 에세이'"></label>
+        </div>
+        <div class="row">
+          <label class="fl grow">책 고르는 조건 <small>(선택)</small>
+            <input type="text" id="bf-prefs" placeholder="예) 2020년 이후 국내 소설 · 단편집 빼고 · 200쪽 안팎 · 너무 유명한 책 말고"></label>
+          <button class="btn pri" id="btn-bfind" style="align-self:flex-end">AI로 책 찾기</button>
+        </div>
+        <div class="hint">AI가 웹에서 후보를 찾고, 교보문고에서 <b>실제로 있는 책인지 · 저자가 맞는지 · 절판인지</b> 확인해 보여 줍니다. 마음에 드는 책을 체크하면 아래 목록에 들어가요.</div>
+        <div id="bf-list"></div>
+      </div>
+      <div class="fl">책 소개 카피 스타일 <small>(소개 문안은 AI가 기존 북케터 밈 게시물 말투로 직접 써요 — 아래 목록엔 제목·저자만 적어도 돼요)</small><div class="row" id="copy-style" style="margin:4px 0 0"></div></div>
+      <label class="fl">추천할 책 목록 <small>(한 줄에 한 권: 제목 / 저자 — 메모는 넣고 싶을 때만. 비워 두면 AI가 주제에 맞춰 골라요. 표지는 교보문고·알라딘에서 자동)</small>
+        <textarea id="pj-books" style="min-height:120px" placeholder="칵테일, 러브, 좀비 / 조예은 / 쇼트 시리즈 판매 1위&#10;땡스 갓, 잇츠 프라이데이 / 심너울 / SF어워드 대상&#10;강풍에도 쓰러지지 않는다 / 모옌 / 노벨문학상 작가 에세이"></textarea></label>
+    </div>
+    <div class="fmtbox hidden" id="fmt-summary">
+      <div class="row">
+        <label class="fl grow">요약할 책 제목 <input type="text" id="pj-book_title" placeholder="예) 트렌드 코리아 2027"></label>
+        <label class="fl">저자 <input type="text" id="pj-book_author" placeholder="예) 김난도 외"></label>
+        <label class="fl">키워드 개수 <input type="number" id="pj-kw_count" value="10" min="2" max="12" step="2" style="width:90px"></label>
+      </div>
+      <div class="row" id="sum-type"></div>
+      <div class="hint">책 내용(키워드·핵심 개념·인상 깊은 문장)은 아래 <b>사실 정보</b> 칸에 붙여 넣어 주세요. AI는 거기 적힌 내용과 널리 알려진 사실만 씁니다.</div>
+    </div>
+    <div class="fmtbox hidden" id="fmt-assets">
+      <div class="assetrow">
+        <div class="asset" data-key="book_bg"><div class="aimg"></div><div><b>책 장·목차 장 배경 사진</b><div class="hint">없으면 표지 사진을 어둡게 깔아요.</div>
+          <label class="btn sm">사진 올리기<input type="file" accept="image/*" hidden></label> <button class="btn sm ghost adel">빼기</button></div></div>
+        <div class="asset" data-key="profile"><div class="aimg round"></div><div><b>팔로우 장 프로필 사진</b><div class="hint">bookketer_mim 팔로우 버튼 옆 동그란 사진</div>
+          <label class="btn sm">사진 바꾸기<input type="file" accept="image/*" hidden></label></div></div>
+      </div>
+    </div>
+    <div class="row">
+      <select id="proj-sel" style="min-width:260px"></select>
+      <button class="btn sm" id="proj-new">+ 새 프로젝트</button>
+      <button class="btn sm danger-ghost" id="proj-del">삭제</button>
+      <span class="hint">자주 쓰는 책·이벤트 정보를 프로젝트로 저장해 두면 다음에 골라 쓰기만 하면 됩니다.</span>
+    </div>
+    <div class="split2">
+      <div>
+        <label class="fl">주제 (책·이벤트·프로젝트 이름) <input type="text" id="pj-name" placeholder="예) 책사줄게 책읽자 2탄"></label>
+        <label class="fl">핵심 메시지 <input type="text" id="pj-message" placeholder="예) 서점 10곳에 선결제했더니 하루 만에 600명이 왔다"></label>
+        <label class="fl">원하는 행동(CTA) <input type="text" id="pj-cta" placeholder="예) 팔로우 + 댓글 달면 서점 지도 링크 보내기"></label>
+      </div>
+      <div>
+        <label class="fl">사실 정보 <small>(숫자·날짜·장소·참여 방법·후기 — AI는 여기 적힌 사실만 씁니다)</small>
+          <textarea id="pj-details" style="min-height:118px" placeholder="예) 10/1 오픈 · 동네 독립서점 10곳 · 서점마다 100만 원 선결제&#10;첫 서점 30분 만에 마감, 하루 600명 참여&#10;피리의 서재 사장님 후기: …"></textarea></label>
+        <label class="fl">캡션 끝 고정 문구 <small>(선택)</small><textarea id="pj-proof" style="min-height:56px" placeholder="예) 📚 북케터 밈 × 필로틱&#10;👉 서점 지도는 프로필 링크에서"></textarea></label>
+      </div>
+    </div>
+    <div class="row"><button class="btn sm pri" id="proj-save">프로젝트 저장</button><span class="hint" id="proj-msg"></span>
+      <button class="btn pri hidden" id="btn-fmt-plan" style="margin-left:auto">이 형식으로 바로 기획하기 →</button></div>
+    <div class="row" id="ready"></div>
+    <div class="hint" id="fmt-hint"></div>
+  </div>
+
+  <!-- 2. 레퍼런스 수집 · 선택 -->
+  <div class="step">
+    <h2><i>2</i>레퍼런스 수집 · 선택</h2>
+    <div class="row">
+      <span id="sess" class="badge"></span>
+      <button class="btn sm" id="btn-login">로그인 세션 저장</button>
+      <label class="hint ck"><input type="checkbox" id="headless"> 수집할 때 브라우저 창 숨기기</label>
+    </div>
+    <div class="hint" style="margin:-4px 0 12px">버튼을 누르면 수집 전용 크롬 창이 뜹니다. 로그인(보안 확인 포함)을 마친 뒤 <b>그 창을 닫으면</b> 세션이 이 PC(data/.session)에 저장돼 다음부터는 바로 수집합니다. <b>수집 전용 부계정</b>을 권장해요.</div>
+    <div class="split2">
+      <div>
+        <div class="hint" style="margin-bottom:6px"><b>방법 A.</b> 인스타 검색창 키워드로 찾기 (스크롤 수집)</div>
+        <div class="row">
+          <input type="text" id="kw" placeholder="예) 책추천 · #독립서점" size="20">
+          <label class="hint">최소 좋아요 <input type="number" id="minl" value="5000" min="0" step="500" style="width:100px"></label>
+          <label class="hint">최근 <input type="number" id="days" value="90" min="0" style="width:70px">일</label>
+        </div>
+        <label class="hint ck" style="margin:2px 0 8px"><input type="checkbox" id="fmt-only" checked> <span id="fmt-lbl">지금 고른 형식만 찾기</span></label>
+        <div class="row" style="gap:8px">
+          <button class="btn pri" id="btn-tag">검색해서 수집 (최대 10개)</button>
+          <button class="btn" id="btn-tag-new" title="같은 키워드로 다시 찾을 때: 전에 살펴본 게시물은 빼고 처음 보는 게시물로 10개">새로 찾기 (안 본 것 10개)</button>
+        </div>
+        <div class="hint" style="margin-top:6px">같은 키워드로 수집하면 인스타가 보여 주는 순서가 같아 결과도 같아요. <b>[새로 찾기]</b>는 전에 살펴본 게시물을 빼고 더 아래까지 찾아 새로 10개를 모읍니다. 최근 0일 = 기간 제한 없음.</div>
+      </div>
+      <div>
+        <div class="hint" style="margin-bottom:6px"><b>방법 B.</b> 찾아 둔 레퍼런스 링크 붙여넣기 <span class="badge ok">인스타 로그인 필요 없음</span></div>
+        <textarea id="urls" style="min-height:62px" placeholder="https://www.instagram.com/p/XXXXXXXX/ (한 줄에 하나, 최대 3개면 바로 기획까지)"></textarea>
+        <label class="hint ck" style="margin:6px 0 0"><input type="checkbox" id="urls-plan" checked> 가져오면 이 레퍼런스로 <b>바로 기획</b>하기 (1번에서 고른 형식으로)</label>
+        <div style="margin-top:8px"><button class="btn pri" id="btn-urls">링크로 가져오기</button></div>
+        <div class="hint" style="margin-top:6px">공개 게시물의 사진 · 캡션 · 좋아요를 가져와요. 댓글은 로그인 없이 못 가져옵니다.</div>
+      </div>
+    </div>
+    <hr class="sep">
+    <div class="row" id="results-top">
+      <b>수집 결과</b>
+      <select id="crawl-sel" style="min-width:340px"></select>
+      <button class="btn sm" id="crawl-reload">새로고침</button>
+      <span class="hint" id="crawl-sum"></span>
+    </div>
+    <div class="row">
+      <span class="hint">좋아요 높은 순 · 카드를 눌러 <b>[선택]</b> (최대 3개) · 선택됨 <b id="npick">0</b>/3</span>
+      <button class="btn pri" id="btn-plan" style="margin-left:auto" title="책추천 형식에서 책 목록이 비어 있으면: 썸네일 카피 베리에이션 → 책 찾기(교보문고 확인) → 책 소개 작성까지 자동">선택한 레퍼런스로 기획하기 →</button>
+    </div>
+    <div class="posts" id="posts"></div>
+  </div>
+
+  <!-- 3. 작업대 -->
+  <div class="step hidden" id="desk">
+    <h2><i>3</i>작업대 <span class="hint" style="font-weight:500">기획·완성본을 탭으로 열어 두고 오가며 작업합니다. 기획이 도는 동안에도 다른 탭을 편집·저장할 수 있어요.</span></h2>
+    <div class="dtabs" id="dtabs"></div>
+    <div class="dwait hidden" id="desk-wait"></div>
+    <div class="hidden" id="plan-step">
+      <div class="dsub"><b>기획 후보</b><span class="hint" id="plan-file"></span></div>
+      <div class="rtabs" id="rtabs"></div>
+      <div class="plansum" id="plan-sum"></div>
+      <div class="pcands" id="pcands"></div>
+      <div class="fbbox" id="fbbox">
+        <div><b>피드백 · 더 전달하고 싶은 내용</b><span class="hint"> — 적은 내용을 반영해 후보 3개를 다시 만듭니다. 몇 번이든 반복할 수 있어요.</span></div>
+        <div class="row" style="margin:10px 0 8px"><select id="fb-target"></select></div>
+        <textarea id="fb" placeholder="예) 2번 카피 방향이 좋은데 더 짧고 세게. 이미지는 그대로 둬도 돼요.&#10;예) 3번은 정보형 느낌이라 빼고, 현장 증언형으로 다시."></textarea>
+        <div class="row" style="margin:10px 0 0"><button class="btn pri" id="btn-replan">이 내용으로 다시 기획</button>
+          <span class="hint">후보를 고르면 캔버스에서 썸네일을 다듬어 저장하고, 나머지 장까지 한 번에 만들어집니다. 안 쓴 후보는 작업 보관함에 쌓입니다.</span></div>
+        <div class="hidden" id="fb-run"></div>
+      </div>
+    </div>
+    <div class="hidden" id="pub-step">
+      <div class="dsub"><b>저장 완료</b><span class="hint" id="pub-file"></span></div>
+      <div class="hint" style="margin-bottom:10px">카드 이미지는 바탕화면 › 카드뉴스 완성본 › 오늘 날짜 폴더에도 저장됐습니다.</div>
+      <div class="cardmgr" id="pub-cards"></div>
+      <div class="hint" style="margin:-4px 0 14px">카드마다 [편집]으로 글자·배경을 고치고, [내 이미지로]로 바꾸거나 [+ 이미지 장 추가]로 끼워 넣을 수 있습니다. 고치면 바탕화면 폴더 이미지도 같이 바뀝니다.</div>
+      <div class="split2">
+        <div><div class="row" style="margin-bottom:6px"><b>캡션</b><span class="hint" id="pub-caplen"></span><button class="btn sm" id="pub-capcopy" style="margin-left:auto">캡션 복사</button></div>
+          <textarea id="pub-cap" style="min-height:260px"></textarea></div>
+        <div><div class="row" style="margin-bottom:6px"><b>고정댓글</b><button class="btn sm" id="pub-cmtcopy" style="margin-left:auto">고정댓글 복사</button></div>
+          <textarea id="pub-cmt" style="min-height:260px"></textarea></div>
+      </div>
+      <div class="row" style="margin-top:12px"><button class="btn" id="pub-capsave">캡션·고정댓글 저장</button>
+        <button class="btn pri" id="pub-open">바탕화면 폴더 열기</button>
+        <a class="btn" id="pub-zip" href="#" download>카드 이미지 내려받기 (zip)</a> <span class="hint" id="pub-note"></span></div>
+      <div class="hint" id="pub-desk" style="margin-top:6px"></div>
+      <div class="refine" id="pub-refine">
+        <div><b>✏️ 카피를 원하는 대로 고치기</b><span class="hint"> — 이 완성본의 후보를 기준으로, 적은 내용을 반영해 새 후보 3개를 만듭니다.</span></div>
+        <textarea id="pub-rf" placeholder="예) 첫 줄을 더 세게, 마지막 줄은 숫자로. 이미지는 그대로 둬도 돼요."></textarea>
+        <div class="row"><button class="btn pri" id="pub-rf-go">이 내용으로 다시 기획 (후보 3개)</button>
+          <span class="hint">새 후보는 이 기획의 '기획' 탭에 새 라운드로 들어옵니다. 지금 완성본은 그대로 남습니다.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="v-lib" class="hidden">
+  <div class="otop"><h2>작업 보관함</h2><div class="chipset" id="lib-status"></div><div class="chipset" id="lib-proj"></div>
+    <button class="btn sm" id="lib-reload">새로고침</button></div>
+  <div class="hint" style="margin:-6px 0 14px">지금까지 나온 기획 후보가 전부 쌓입니다. 안 쓴 후보는 골라서 편집·저장하고, 저장한 완성본은 언제든 다시 열 수 있습니다.</div>
+  <div class="libgrid" id="lib-grid"><div class="empty">불러오는 중…</div></div>
+</div>
+
+<div id="v-files" class="hidden">
+  <div class="otop"><h2>결과 한눈에 보기</h2><button class="btn sm" id="files-reload">새로고침</button><button class="btn sm" id="sel-mode">선택해서 삭제</button></div>
+  <div class="selbar hidden" id="selbar">
+    <b id="sel-n">0개 선택</b><button class="btn sm" id="sel-all">보이는 결과 전체 선택</button><button class="btn sm" id="sel-none">선택 해제</button>
+    <span class="hint">카드를 누르면 선택됩니다. 지운 결과는 <b>data › 휴지통</b> 폴더로 옮겨집니다.</span>
+    <button class="btn sm danger" id="sel-del" disabled>선택한 결과 삭제</button><button class="btn sm" id="sel-done">끝내기</button>
+  </div>
+  <div class="board" id="board">
+    <div class="col"><div class="colh"><i>1</i><div><b>수집 결과</b><small>인스타그램 레퍼런스</small></div><label class="colall hidden"><input type="checkbox" data-colall="crawl"> 전체</label><span class="n" id="n-crawl">0</span></div><div class="colb" id="c-crawl"></div></div>
+    <div class="col"><div class="colh"><i>2</i><div><b>기획 결과</b><small>후보 3개 · 피드백 라운드</small></div><label class="colall hidden"><input type="checkbox" data-colall="analysis"> 전체</label><span class="n" id="n-analysis">0</span></div><div class="colb" id="c-analysis"></div></div>
+    <div class="col"><div class="colh"><i>3</i><div><b>생성 결과</b><small id="s-generate">저장한 완성본</small></div><label class="colall hidden"><input type="checkbox" data-colall="generate"> 전체</label><span class="n" id="n-generate">0</span></div><div class="colb" id="c-generate"></div></div>
+  </div>
+  <div class="hint" style="margin-top:10px">카드를 누르면 아래에 md 기록이 열리고, 그 결과와 <b>이어진 수집·기획·생성 결과</b>가 함께 표시됩니다. 같은 작업을 반복해도 파일은 덮어쓰지 않고 초 단위 이름으로 새로 쌓입니다.</div>
+  <div class="step detail" id="detail">
+    <div class="trail" id="trail"></div>
+    <div class="dhead"><h3 id="fname">위에서 결과를 선택하세요</h3><button class="btn sm pri hidden" id="fgo"></button><button class="btn sm hidden" id="fcopy">원문 복사</button></div>
+    <div class="cards" id="fcards"></div>
+    <div id="fview"><div class="empty">수집 · 기획 · 생성 결과 중 하나를 누르면 여기에 내용이 보입니다.</div></div>
+  </div>
+</div>
+</main>
+
+<div id="vx"><div class="sbox vxbox">
+  <div class="row" style="margin:0"><h3 style="margin:0">✍️ 썸네일 카피 베리에이션</h3><button class="btn sm" id="vx-close" style="margin-left:auto">닫기</button></div>
+  <div id="vx-body"></div>
+</div></div>
+<div id="shx"><div class="sbox shbox">
+  <h3>🔗 팀원과 함께 쓰는 링크</h3>
+  <div class="hint">링크를 받은 사람만 들어오도록 <b>공유 비밀번호</b>를 겁니다. 링크로 들어온 사람도 수집 결과 보기·기획·편집·저장을 할 수 있어요.</div>
+  <div><div class="row"><input type="password" id="sh-pw" placeholder="공유 비밀번호 (4글자 이상)" autocomplete="new-password"><button class="btn" id="sh-pwsave">비밀번호 저장</button></div>
+    <div class="hint" id="sh-pwnote"></div></div>
+  <div id="sh-state" class="hint"></div>
+  <div class="row hidden" id="sh-urlrow"><input type="text" id="sh-url" readonly><button class="btn pri" id="sh-copy">링크 복사</button></div>
+  <div class="row"><button class="btn pri" id="sh-start">공유 시작</button><button class="btn hidden" id="sh-stop">공유 끄기</button><button class="btn" id="sh-close" style="margin-left:auto">닫기</button></div>
+  <ul class="hint">
+    <li>이 PC 와 검은 서버 창이 켜져 있어야 링크가 열립니다. 공유를 다시 켜거나 PC 를 껐다 켜면 주소가 바뀌어요.</li>
+    <li>링크로 들어온 사람은 인스타·Claude 로그인, 바탕화면 폴더 열기, 공유 설정을 쓸 수 없어요(창이 이 PC 에 뜨기 때문). 카드는 [카드 이미지 내려받기]로 받습니다.</li>
+    <li>기획(AI)·수집은 모두 이 PC 의 Claude 구독과 인스타 세션으로 돌아가서, 사용 한도를 함께 씁니다.</li>
+    <li>무료 Cloudflare 임시 터널이라 늘 켜져 있다는 보장은 없어요.</li>
+  </ul>
+</div></div>
+<div id="dlg"><div class="dbox"><div class="dic">✓</div><h3 id="dtitle"></h3><p id="dmsg"></p><div class="row" style="justify-content:center;margin:0" id="dbtns"></div></div></div>
+<div id="modal"><button class="x" id="mx">✕</button><div class="mbox" id="mbox"></div></div>
+
+<!-- 캔버스 편집기 (썸네일) -->
+<div id="cvx"><div class="cvbox">
+  <div class="cvstage"><canvas id="cv"></canvas><div class="hint">이미지·글자는 끌어서 옮기고, 모서리를 끌어 크기를 바꿉니다. 저장하면 1080×1350 PNG로 저장됩니다.</div></div>
+  <div class="cvpanel">
+    <div class="cvhead"><b>썸네일 편집</b><button class="btn pri" id="cv-save">저장</button><button class="btn" id="cv-close">닫기</button></div>
+    <div class="hint" id="cv-msg"></div>
+    <section><h4>배경 이미지</h4>
+      <div class="cvstrip" id="cv-strip"></div>
+      <div class="row"><label class="btn sm">내 사진 올리기<input type="file" id="cv-upfile" accept="image/*" hidden></label><button class="btn sm" id="cv-fit">화면 채우기</button></div>
+      <div class="morebox" id="cv-morebox">
+        <input type="text" id="cv-imgdir" placeholder="원하는 이미지 방향 (예: 서점 앞에 줄 선 사람들, 따뜻한 조명의 책방)">
+        <div class="row"><button class="btn sm pri" id="cv-more-dir">이 방향으로 찾기</button><button class="btn sm" id="cv-more">추가 이미지</button></div>
+        <div class="hint" id="cv-more-msg"></div>
+      </div>
+      <div class="row"><span class="hint">확대</span><input type="range" id="cv-zoom" min="50" max="300" value="100"></div>
+      <div class="hint">⚠ 핀터레스트 이미지는 저작권이 있을 수 있어요. 게시 전 사용 권한을 확인하거나 직접 찍은 사진을 쓰세요.</div>
+    </section>
+    <section><h4>어둡게 깔기</h4>
+      <div class="row"><select id="cv-shade-dir"><option value="bottom">아래쪽 진하게</option><option value="top">위쪽 진하게</option><option value="all">전체</option></select>
+        <input type="range" id="cv-shade" min="0" max="100" value="90"></div>
+    </section>
+    <section><h4>글자 · 라벨 · 말풍선</h4>
+      <div class="cvlayers" id="cv-layers"></div>
+      <textarea id="cv-text" placeholder="위에서 글자 상자를 고르면 여기서 고칠 수 있습니다. [[단어]] = 연두 강조"></textarea>
+      <div class="row"><span class="hint">크기</span><input type="number" id="cv-size" min="10" max="300" style="width:80px">
+        <span class="hint">색</span><input type="color" id="cv-color">
+        <button class="sw" data-c="#ffffff" style="background:#fff" title="흰색"></button><button class="sw" data-c="#b9f6a8" style="background:#b9f6a8" title="연두"></button>
+        <button class="sw" data-c="#f5d547" style="background:#f5d547" title="노랑"></button><button class="sw" data-c="#1f2a36" style="background:#1f2a36" title="남색"></button>
+        <label class="hint"><input type="checkbox" id="cv-bold"> 굵게</label></div>
+      <div class="row"><span class="hint">정렬</span><button class="btn sm" data-al="left">왼쪽</button><button class="btn sm" data-al="center">가운데</button><button class="btn sm" data-al="right">오른쪽</button>
+        <label class="hint"><input type="checkbox" id="cv-shadow"> 그림자</label></div>
+      <div class="row"><button class="btn sm" id="cv-add">글자 상자 추가</button><button class="btn sm" id="cv-add-pill">연두 라벨 추가</button><button class="btn sm" id="cv-add-call">말풍선 추가</button></div>
+      <div class="row"><button class="btn sm" id="cv-del">삭제</button><button class="btn sm" id="cv-fwd">앞으로</button><button class="btn sm" id="cv-back">뒤로</button></div>
+    </section>
+  </div>
+</div></div>
+
+<!-- 본문 장 편집 -->
+<div id="slx"><div class="sbox">
+  <div class="row between"><h3 id="sl-title">카드 편집</h3><button class="btn sm" id="sl-close">닫기</button></div>
+  <div class="split2">
+    <div>
+      <div id="sl-fields" class="slf"></div>
+      <div class="hint">강조: [[연두]] · {{빨강}} · **굵게** · __빨간 물결 밑줄__ · 줄바꿈은 그대로</div>
+    </div>
+    <div><img id="sl-preview" alt=""></div>
+  </div>
+  <div class="row" style="margin-top:10px"><button class="btn pri" id="sl-save">이 장 다시 만들기</button><span class="hint" id="sl-msg"></span></div>
+</div></div>
+
+<div id="toasts"></div>
+<pre id="logbox" hidden></pre>
+<script src="/static/app.js"></script>
+</body>
+</html>

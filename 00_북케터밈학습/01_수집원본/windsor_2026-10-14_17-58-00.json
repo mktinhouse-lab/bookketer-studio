@@ -1,0 +1,16 @@
+{
+  "source": "Windsor.ai instagram 커넥터 (계정 bookketer_mim, id 17841432113776596), media_type=CAROUSEL_ALBUM, 2018-01-01~2026-10-14",
+  "fetched_at": "2026-10-14_17-58-00",
+  "note": "계정 전체 게시물 44개 중 캐러셀 9개, 나머지 35개는 릴스. 단일 이미지 없음.",
+  "posts": [
+    {"media_shortcode": "DcQZE1DGeLA", "media_id": "18121854124842302", "timestamp": "2026-08-20T09:00:01+0000", "media_like_count": 775, "media_comments_count": 2, "media_saved": 1568, "media_shares": 1201, "media_reach": 43333, "media_views": 81619, "media_follows": 39, "media_profile_visits": 345},
+    {"media_shortcode": "Dck_YLwGQZk", "media_id": "17943414996293967", "timestamp": "2026-08-29T09:00:02+0000", "media_like_count": 1180, "media_comments_count": 7, "media_saved": 1435, "media_shares": 636, "media_reach": 58531, "media_views": 98213, "media_follows": 45, "media_profile_visits": 267},
+    {"media_shortcode": "Dcx3cBBGdPW", "media_id": "18019473536876722", "timestamp": "2026-09-02T09:00:02+0000", "media_like_count": 1386, "media_comments_count": 3, "media_saved": 2653, "media_shares": 1452, "media_reach": 88425, "media_views": 137368, "media_follows": 121, "media_profile_visits": 455},
+    {"media_shortcode": "DdTX_rUH0wZ", "media_id": "18069758987495288", "timestamp": "2026-09-15T09:20:02+0000", "media_like_count": 2563, "media_comments_count": 10, "media_saved": 6369, "media_shares": 4403, "media_reach": 184862, "media_views": 280392, "media_follows": 316, "media_profile_visits": 1196},
+    {"media_shortcode": "Ddd9jYCH6QR", "media_id": "18161682454489444", "timestamp": "2026-09-19T12:00:08+0000", "media_like_count": 714, "media_comments_count": 10, "media_saved": 656, "media_shares": 367, "media_reach": 43281, "media_views": 79997, "media_follows": 20, "media_profile_visits": 260},
+    {"media_shortcode": "DdnZy1On0Xa", "media_id": "18218751700346013", "timestamp": "2026-09-23T04:00:02+0000", "media_like_count": 618, "media_comments_count": 2, "media_saved": 986, "media_shares": 396, "media_reach": 45102, "media_views": 80654, "media_follows": 48, "media_profile_visits": 301},
+    {"media_shortcode": "DdlaMIfH8F-", "media_id": "18021661805707537", "timestamp": "2026-09-26T09:25:02+0000", "media_like_count": 439, "media_comments_count": 4, "media_saved": 694, "media_shares": 297, "media_reach": 21130, "media_views": 42432, "media_follows": 30, "media_profile_visits": 204},
+    {"media_shortcode": "Dd3d_v8H3K0", "media_id": "18094483577395309", "timestamp": "2026-09-29T09:45:28+0000", "media_like_count": 1431, "media_comments_count": 1633, "media_saved": 820, "media_shares": 739, "media_reach": 37191, "media_views": 84110, "media_follows": 698, "media_profile_visits": 1801},
+    {"media_shortcode": "DebTFiHnwsf", "media_id": "18155305219518332", "timestamp": "2026-10-13T07:42:48+0000", "media_like_count": 108, "media_comments_count": 2, "media_saved": 80, "media_shares": 24, "media_reach": 4635, "media_views": 13166, "media_follows": 1, "media_profile_visits": 33}
+  ]
+}

@@ -1,0 +1,30 @@
+/* 북케터밈 카드뉴스 템플릿 — prompts/design_spec.md(사용자 실측) 수치 그대로. 편집기 미리보기와 PNG 내보내기가 같이 쓴다. */
+@font-face{font-family:'PretendardC';font-weight:100;src:url('/static/fonts/Pretendard-Thin.woff2') format('woff2')}
+@font-face{font-family:'PretendardC';font-weight:300;src:url('/static/fonts/Pretendard-Light.woff2') format('woff2')}
+@font-face{font-family:'PretendardC';font-weight:400;src:url('/static/fonts/Pretendard-Regular.woff2') format('woff2')}
+@font-face{font-family:'PretendardC';font-weight:600;src:url('/static/fonts/Pretendard-SemiBold.woff2') format('woff2')}
+@font-face{font-family:'PretendardC';font-weight:700;src:url('/static/fonts/Pretendard-Bold.woff2') format('woff2')}
+@font-face{font-family:'PretendardC';font-weight:800;src:url('/static/fonts/Pretendard-ExtraBold.woff2') format('woff2')}
+.card{position:relative;width:1080px;height:1350px;overflow:hidden;background:#000;font-family:'PretendardC',sans-serif;color:#fff;-webkit-font-smoothing:antialiased;word-break:keep-all}
+.card *{box-sizing:border-box}
+.card .bgimg{position:absolute;max-width:none;user-select:none;pointer-events:none}
+.card .grad{position:absolute;left:0;top:659px;width:1080px;height:691px;pointer-events:none}
+.card .chip{position:absolute;display:flex;align-items:center;justify-content:center;border:2px solid #000;color:#000;white-space:nowrap}
+.card .chip.lab{left:53px;width:197px;height:57px;background:#fff;border-radius:3px;font-weight:600;font-size:28px;letter-spacing:0}
+.card .copy{position:absolute;left:0;width:1080px;height:127px;display:flex;align-items:center;justify-content:center;font-weight:700;letter-spacing:-2.1px;white-space:nowrap;text-shadow:0 0 32px #000,0 0 32px #000}
+.card .copy span{display:inline-block;transform-origin:center}
+.card .bchip{left:50%;transform:translateX(-50%);height:69px;padding:0 30px}
+.card .bchip.t{top:138px;background:#D4FEBE;font-weight:600;font-size:39.5px}
+.card .bchip.h{top:226px;background:#fff;font-weight:300;font-size:34.2px;padding:0 20px}
+.card .cover{position:absolute;left:390px;top:340px;width:340px;height:520px;display:flex;align-items:center;justify-content:center}
+.card .cover img{max-width:100%;max-height:100%;display:block}
+.card .desc{position:absolute;left:60px;width:960px;text-align:center;font-weight:100;font-size:36.4px;line-height:50px;letter-spacing:-0.7px}
+.card .desc div{white-space:nowrap}
+.card .cta-main{position:absolute;top:440px;left:0;width:1080px;text-align:center;font-weight:600;font-size:50.2px;line-height:60px}
+.card .cta-sub{position:absolute;top:518px;left:0;width:1080px;text-align:center;font-weight:300;font-size:43.3px;line-height:52px}
+.card .pill{position:absolute;left:97px;top:635px;width:890px;height:281px;background:#fff;border-radius:141px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.card .pf{position:absolute;left:159px;top:677px;width:196px;height:196px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #e9e9ee}
+.card .pf img{position:absolute;left:10px;top:10px;width:176px;height:176px;border-radius:50%;object-fit:cover}
+.card .pid{position:absolute;left:372px;top:746px;height:66px;display:flex;align-items:center;font-weight:700;font-size:39px;color:#111;letter-spacing:-.5px}
+.card .fbtn{position:absolute;left:702px;top:736px;width:218px;height:82px;border-radius:16px;background:#4a63f5;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:46px}
+.card .cursor{position:absolute;left:872px;top:786px;width:62px;height:76px}

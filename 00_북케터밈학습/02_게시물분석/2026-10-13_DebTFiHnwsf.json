@@ -1,0 +1,83 @@
+{
+  "post_kind": "책 요약",
+  "thumbnail": {
+    "copy_lines": [
+      {
+        "text": "30초 요약",
+        "color": "흰색"
+      },
+      {
+        "text": "트렌드코리아 2027",
+        "color": "민트"
+      }
+    ],
+    "chips": [
+      "북케터 밈",
+      "저장 필수"
+    ],
+    "sticker": "",
+    "background": "회색 벽 앞 카페 테이블에 앉은 긴 머리 여성이 『트렌드 코리아 2027』 책(흰 표지, 주황 2027, 파란 띠 ALPHA SHEEP)을 펼쳐 들어 얼굴을 가린 사진. 올리브색 니트, 앞쪽에 아이스 음료 잔. 차분하고 흐린 무채색 톤, 하단은 어둡게 그라데이션 처리되어 카피가 얹힘",
+    "cutout": ""
+  },
+  "slides": [
+    {
+      "index": 1,
+      "role": "썸네일",
+      "text": "북케터 밈\n저장 필수\n30초 요약\n트렌드코리아 2027"
+    },
+    {
+      "index": 2,
+      "role": "책 요약·내용",
+      "text": "30초 요약\n트렌드 코리아 2027\n2027 Slogan : ALPHA SHEEP\n01 권태사회\n02 라이프 ROI\n03 폼팩터 시프트\n04 해봄경제\n05 저장인류\n06 바이브 워킹\n07 리:텐션 전략\n08 휴먼엣지\n09 하프시그널\n10 안목자본\n키워드 뜻 빠른 요약 보기! →"
+    },
+    {
+      "index": 3,
+      "role": "책 요약·내용",
+      "text": "KEYWORD 01\n권태사회\nAge of Ennui Society\n볼 건 넘치는데 왜 재미가 없을까?\n자극 과잉이 만든 ‘바쁜 권태’\nKEYWORD 02\n라이프 ROI\nLife ROI\n시간·돈·관계까지 손익을 따진다\n들인 만큼 안 돌아오면, 손절"
+    },
+    {
+      "index": 4,
+      "role": "책 요약·내용",
+      "text": "KEYWORD 03\n폼팩터 시프트\nPlasticity in the Form Factor Shift\n붙이는 비타민, 알약으로 만드는 육수\n기능은 그대로, ‘형태’가 바뀐다\nKEYWORD 04\n해봄경제\n‘Have-a-Go’ Economy\n완벽한 준비보다 “일단 해봄!”\nAI 덕분에 누구나 해보고 고친다"
+    },
+    {
+      "index": 5,
+      "role": "책 요약·내용",
+      "text": "KEYWORD 05\n저장인류\nAll is Saved: Homo Archivarius\n좋은 문구·회의·영수증까지 일단 저장\n이제는 ‘다시 꺼내 쓰는 법’이 관건\nKEYWORD 06\n바이브 워킹\nSeamless AI Integration: Vibe Working\nAI 툴을 ‘쓰는’ 수준을 넘어\nAI와 흐름을 맞춰 함께 일한다"
+    },
+    {
+      "index": 6,
+      "role": "책 요약·내용",
+      "text": "KEYWORD 07\n리:텐션 전략\nHold on to Your Customers! Retention Strategy\n새 고객 모시기보다 지금 고객 지키기\n계속 머물고, 다시 찾게 만드는 경험\nKEYWORD 08\n휴먼엣지\nEvery AI Needs the Human Edge\nAI가 뭐든 만들어주는 시대일수록\n사람의 선택·손길·책임이 무기"
+    },
+    {
+      "index": 7,
+      "role": "책 요약·내용",
+      "text": "KEYWORD 09\n하프시그널\nEmbracing Menopause: the ‘Half Signal’\n갱년기는 숨길 게 아니라 관리하는 것\n끝이 아닌 인생의 ‘반환점’\nKEYWORD 10\n안목자본\nPower of Taste Capital\n만드는 건 AI가, 고르는 건 사람이\n‘좋은 걸 알아보는 눈’이 자본"
+    },
+    {
+      "index": 8,
+      "role": "기타",
+      "text": "SELF CHECK\n나는 몇 개 해당?\nTrend Korea 2027 Self Check\n☐ 쇼츠 넘기다 “볼 게 없네” 한 적 있다\n☐ 만나기 전 ‘가성비’부터 따진다\n☐ 갤러리에 캡처만 수천 장이다\n☐ 일단 해보고 고치는 편이다\n☐ AI랑 같이 일하는 게 익숙하다\n☐ 단골 브랜드에 계속 돌아간다\n☐ 고르는 안목엔 자신 있다\n내 개수를 댓글로 남겨주세요!\n갓생\n레츠기릿"
+    },
+    {
+      "index": 9,
+      "role": "CTA",
+      "text": "갓생\n레츠기릿\n저장해두고 꺼내보세요!\n트렌드·책 소식, 북케터밈에서 빠르게!\nbookketer_mim\n팔로우"
+    }
+  ],
+  "books": [],
+  "cta": "갓생\n레츠기릿\n저장해두고 꺼내보세요!\n트렌드·책 소식, 북케터밈에서 빠르게!\nbookketer_mim\n팔로우",
+  "design": {
+    "background": "장마다 풀블리드 사진에 어두운 반투명 오버레이. 1장은 책을 든 여성 사진, 2장은 '2027년 성공할 여자' 현수막 앞 여성 밈 사진, 3~7장은 가로로 반씩 나눈 2단 구성으로 키워드마다 분위기 사진(밤에 폰 보는 여성, 모래시계, 패치 붙인 다리, 도예, 사진 그리드, 데스크 셋업, 스탬프 쿠폰, 바느질, 요가, 갤러리), 8~9장은 하늘 배경의 분홍 토끼 탈 점프 밈 사진",
+    "colors": "흰색 본문·제목, 민트(#D4FEBE 계열) 강조 줄과 라벨 칩(민트 바탕 검정 글자), 1장 좌상단 칩은 흰 바탕 검정 테두리·검정 글자, CTA 팔로우 버튼은 파란색(흰 글자), 프로필 바는 흰 알약형",
+    "layout": "좌측 정렬 일관. 좌상단 민트 라벨 칩(30초 요약 / KEYWORD 0N / SELF CHECK) → 큰 굵은 제목 → 작은 영문 부제 → 흰 줄 + 민트 줄 2줄 설명. 1장은 하단 중앙에 2줄 대형 카피. 2장은 목차형 번호 리스트 + 민트 '보기 →' 유도. 8장은 체크박스 리스트 + 말풍선. 9장은 중앙 정렬 문구 + 인스타 프로필·팔로우 버튼 바(커서 아이콘)",
+    "fonts": "산세리프 고딕(Pretendard 계열 느낌). 제목·썸네일 카피는 ExtraBold/Black 수준 대형, 영문 부제는 Light/Regular 소형, 설명 줄은 Regular~Medium, 칩 글자 Medium. 말풍선은 손글씨풍 고딕"
+  },
+  "notes": "2장 배경 사진 속 현수막 글자 '2028년'(8 위에 7을 덧씀) '성공할 여자'는 사진 속 소품이라 slides 텍스트에서 제외. 1장 책 표지 소문구(작은 글씨)는 판독 불가라 생략. 8·9장 '갓생 레츠기릿' 말풍선은 밈 이미지 일부로 보이나 글자는 포함함. 책 소개 장(표지·해시태그)이 없는 요약형이라 books는 비움.",
+  "code": "DebTFiHnwsf",
+  "url": "https://www.instagram.com/p/DebTFiHnwsf/",
+  "date": "2026-10-13",
+  "analyzed_at": "2026-10-14_17-53-01",
+  "model": "Claude Code 대화"
+}

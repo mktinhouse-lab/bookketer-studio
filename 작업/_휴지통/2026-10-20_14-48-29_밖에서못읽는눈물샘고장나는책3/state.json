@@ -1,0 +1,733 @@
+{
+  "id": "2026-10-20_14-48-29_밖에서못읽는눈물샘고장나는책3",
+  "created": "2026-10-20_14-48-29",
+  "count": 4,
+  "step": 4,
+  "title": "펼치자마자 훌쩍 / 눈물샘 고장 나는 책 4",
+  "refs": [
+    {
+      "no": 1,
+      "url": "https://www.instagram.com/p/DKttEAPhM3i/",
+      "author": "kyoyang.mag",
+      "date": "",
+      "likes": 20141,
+      "comments": 40,
+      "caption": "읽다 보면 나도 모르게 또륵...✨\n눈물이 나는 책들이 있죠.\n\n괜히 울고 싶은 날 꺼내 읽으면\n괜히 후련해지는 기분이 들기도 하고요.\n\n오늘은 그럴 때 읽으면 좋을 책들을 추천합니다!\n\n🥹 《긴긴밤》 루리\n\n🥹 《아무튼, 디지몬》 천선란\n\n🥹 《소년이 온다》 한강\n\n🥹 《H마트에서 울다》 미셸 자우너\n\n🥹 《미 비포 유》 조조 모예스",
+      "slides": 6,
+      "images": [
+        "ref1_01.jpg",
+        "ref1_02.jpg",
+        "ref1_03.jpg",
+        "ref1_04.jpg",
+        "ref1_05.jpg",
+        "ref1_06.jpg"
+      ],
+      "top_comments": "",
+      "source": "링크(로그인 없이)",
+      "copy": "",
+      "structure": "",
+      "analysis": null
+    }
+  ],
+  "steps": {
+    "1": {
+      "file": "01_레퍼런스.md",
+      "at": "2026-10-20_14-49-04"
+    },
+    "2": {
+      "at": "2026-10-20_14-55-54"
+    },
+    "3": {
+      "file": "03_책추천_2026-10-20_14-56-18.md",
+      "at": "2026-10-20_14-56-18"
+    },
+    "4": {
+      "file": "04_설명글_2026-10-20_14-56-19.md",
+      "at": "2026-10-20_14-56-19"
+    }
+  },
+  "updated": "2026-10-20_16-16-58",
+  "copy": {
+    "analysis": {
+      "hook": "썸네일 카피가 수집되지 않아 캡션 첫 줄을 기준으로 본다. '읽다 보면 나도 모르게 또륵...'처럼 읽는 도중에 몸이 먼저 반응하는 순간(눈물)을 의성어로 보여 주고, '울고 싶은 날 → 후련해진다'는 감정 효용을 약속한다.",
+      "target": "괜히 울고 싶거나 감정을 한번 쏟아내고 싶은 날, 마음껏 울 핑계가 필요한 독자에게 말을 건다.",
+      "emotion": "참았던 눈물을 터뜨리고 싶은 마음과, 울고 나서 개운해지고 싶은 카타르시스를 건드린다.",
+      "evidence": "좋아요 20,141 · 댓글 40 · 6장. 저장·공유·댓글 내용은 수집되지 않아 확인할 수 없다.",
+      "formula": "[읽는 행동 + 무의식 반응(의성어)] / [눈물·후련함 같은 감정 효용] 책 N"
+    },
+    "items": [
+      {
+        "kind": "베리에이션",
+        "line1": "펼치자마자 훌쩍",
+        "line2": "눈물샘 고장 나는 책 5",
+        "device": "'또륵'을 '훌쩍'으로 바꾼 의성어 훅 + 눈물샘 고장이라는 몸 반응 과장",
+        "id": "2026-10-20_14-50-04_0",
+        "pinned": false,
+        "recommended": false
+      },
+      {
+        "kind": "베리에이션",
+        "line1": "출근길에 펼쳤다가",
+        "line2": "몰래 눈물 훔치는 책 5",
+        "device": "읽는 상황(출근길)을 구체적으로 넣고, '나도 모르게'를 '몰래 눈물 훔치는' 장면으로 바꿈",
+        "id": "2026-10-20_14-50-04_1",
+        "pinned": false,
+        "recommended": false
+      },
+      {
+        "kind": "베리에이션",
+        "line1": "마지막 장에서",
+        "line2": "휴지 반 통 쓰는 책 5",
+        "device": "읽는 순간을 '마지막 장'으로 좁히고 휴지 반 통이라는 수치형 과장으로 눈물을 보여 줌",
+        "id": "2026-10-20_14-50-04_2",
+        "pinned": false,
+        "recommended": false
+      },
+      {
+        "kind": "베리에이션",
+        "line1": "울컥 주의;",
+        "line2": "참았던 눈물 터지는 책 5",
+        "device": "세미콜론으로 짧은 자극 단어(울컥 주의)를 먼저 끊고, 뒤에 '터지는' 몸 반응을 둠",
+        "id": "2026-10-20_14-50-04_3",
+        "pinned": false,
+        "recommended": false
+      },
+      {
+        "kind": "베리에이션",
+        "line1": "펑펑 울고 나면",
+        "line2": "속이 개운해지는 책 5",
+        "device": "레퍼런스의 '울고 나면 후련' 효용을 '개운해지는'으로 바꿔 결과를 약속함",
+        "id": "2026-10-20_14-50-04_4",
+        "pinned": false,
+        "recommended": false
+      },
+      {
+        "kind": "디벨롭",
+        "line1": "슬픈 영화보다",
+        "line2": "눈물 쏙 빼는 책 5",
+        "device": "성과 2위의 강한 비교 대상 공식을 눈물로 옮김(영화 vs 책)",
+        "id": "2026-10-20_14-50-04_5",
+        "pinned": false,
+        "recommended": false
+      },
+      {
+        "kind": "디벨롭",
+        "line1": "동화인 줄 알았는데",
+        "line2": "어른이 더 우는 책 5",
+        "device": "역접으로 기대(동화)와 결과(어른 눈물)를 비틀고, 타깃을 어른으로 바꿈",
+        "id": "2026-10-20_14-50-04_6",
+        "pinned": false,
+        "recommended": false
+      },
+      {
+        "kind": "디벨롭",
+        "line1": "엄마 생각나는 밤",
+        "line2": "전화 걸고 싶어지는 책 5",
+        "device": "감정을 슬픔에서 가족 그리움으로 넓히고, 다 읽은 뒤의 행동(전화)을 효용으로 약속함",
+        "id": "2026-10-20_14-50-04_7",
+        "pinned": false,
+        "recommended": false
+      },
+      {
+        "kind": "디벨롭",
+        "line1": "자기 전 딱 30분",
+        "line2": "베개 젖는 책 5",
+        "device": "구체적인 시간·상황(자기 전 30분) + 짧은 몸 반응 과장(베개 젖는)",
+        "id": "2026-10-20_14-50-04_8",
+        "pinned": false,
+        "recommended": true
+      },
+      {
+        "kind": "디벨롭",
+        "line1": "울 곳 없는 어른에게",
+        "line2": "대신 울어주는 책 5",
+        "device": "타깃을 '울 곳 없는 어른'으로 부르고, 책이 대신 울어 준다는 위로 프레임으로 바꿈",
+        "id": "2026-10-20_14-50-04_9",
+        "pinned": false,
+        "recommended": false
+      }
+    ],
+    "recommend": "'자기 전 딱 30분 / 베개 젖는 책 5'는 성과 상위 패턴인 구체적인 읽는 상황·숫자에 몸 반응 효용을 더한 구조라 0.5초 안에 읽힌다. '베개 젖는'은 눈물 나는 책이라면 어떤 책으로 골라도 내용이 뒷받침하므로 클릭한 뒤 실망할 일이 적고, 레퍼런스 표현과도 겹치지 않는다. 다만 '30분'을 쓰니 책 고르기에서 너무 두꺼운 책은 피하는 게 좋다. 대안은 '슬픈 영화보다 / 눈물 쏙 빼는 책 5'다. 성과 2위의 비교 공식을 그대로 옮겨 와 도달을 노리기 좋다.",
+    "rounds": 1,
+    "chosen": {
+      "line1": "펼치자마자 훌쩍",
+      "line2": "눈물샘 고장 나는 책 4",
+      "device": "'또륵'을 '훌쩍'으로 바꾼 의성어 훅 + 눈물샘 고장이라는 몸 반응 과장",
+      "kind": "베리에이션",
+      "id": "2026-10-20_14-50-04_0"
+    }
+  },
+  "books": {
+    "items": [
+      {
+        "key": "278770576",
+        "title": "작별하지 않는다",
+        "author": "한강",
+        "publisher": "문학동네",
+        "pub_date": "2021-09-09",
+        "field": "소설/시/희곡 > 한국소설",
+        "cover": "https://image.aladin.co.kr/product/27877/5/cover500/8954682154_3.jpg",
+        "description": "2016년 <채식주의자>로 인터내셔널 부커상을 수상하고 2018년 <흰>으로 같은 상 최종 후보에 오른 한강 작가의 5년 만의 장편소설. 2019년 겨울부터 이듬해 봄까지 계간 <문학동네>에 전반부를 연...",
+        "pages": 332,
+        "sales_point": 157906,
+        "rank_now": "한국소설 주간 47위",
+        "best_record": "종합 1위 2주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=278770576",
+        "checked_at": "2026-10-20 14:52",
+        "why": "노벨문학상 작가가 그린 제주 4·3, 오래 아픈 여운",
+        "summary": "<채식주의자>로 인터내셔널 부커상을 받은 한강 작가가 5년 만에 낸 장편소설이에요.\n2019년 겨울부터 이듬해 봄까지 계간 <문학동네>에 전반부를 연재했어요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "263027170",
+        "title": "긴긴밤",
+        "author": "루리",
+        "publisher": "문학동네",
+        "pub_date": "2021-02-03",
+        "field": "어린이 > 동화/명작/고전",
+        "cover": "https://image.aladin.co.kr/product/26302/71/cover500/8954677150_1.jpg",
+        "description": "제21회 문학동네어린이문학상 대상 수상작. 지구상의 마지막 하나가 된 흰바위코뿔소 노든과 버려진 알에서 태어난 어린 펭귄이 수없는 긴긴밤을 함께하며, 바다를 찾아가는 이야기이다.",
+        "pages": 144,
+        "sales_point": 149981,
+        "rank_now": "어린이 주간 10위",
+        "best_record": "종합 top10 2주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=263027170",
+        "checked_at": "2026-10-20 14:52",
+        "why": "마지막 코뿔소와 펭귄의 여정, 어른이 더 우는 동화",
+        "summary": "제21회 문학동네어린이문학상 대상 수상작이에요.\n지구상의 마지막 흰바위코뿔소 노든과 버려진 알에서 태어난 어린 펭귄이 나오는 이야기예요.\n둘은 수없는 긴긴밤을 함께 보내며 바다를 찾아가요.",
+        "pilotic": false,
+        "used": false,
+        "cover_file": "01_긴긴밤.jpg"
+      },
+      {
+        "key": "2727875",
+        "title": "엄마를 부탁해",
+        "author": "신경숙",
+        "publisher": "창비",
+        "pub_date": "2008-10-24",
+        "field": "소설/시/희곡 > 한국소설",
+        "cover": "https://image.aladin.co.kr/product/272/78/cover500/8936433679_2.jpg",
+        "description": "2011년 맨 아시아 문학상 수상작으로, 신경숙의 8번째 장편소설이다. 2007년 겨울부터 2008년 여름까지「창작과비평」에 연재된 작품이다. 지하철역에서 아버지의 손을 놓치고 실종된 어머니의 흔적을 추적하면서 기...",
+        "pages": 320,
+        "sales_point": 84425,
+        "rank_now": null,
+        "best_record": null,
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2727875",
+        "checked_at": "2026-10-20 14:52",
+        "why": "서울역에서 엄마를 잃어버린 가족, 국민 눈물 소설",
+        "summary": "2011년 맨 아시아 문학상 수상작으로, 신경숙의 8번째 장편소설이에요.\n2007년 겨울부터 2008년 여름까지 「창작과비평」에 연재됐어요.\n지하철역에서 아버지의 손을 놓치고 실종된 어머니의 흔적을 추적하는 이야기예요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "300485187",
+        "title": "아버지의 해방일지",
+        "author": "정지아",
+        "publisher": "창비",
+        "pub_date": "2022-09-02",
+        "field": "소설/시/희곡 > 한국소설",
+        "cover": "https://image.aladin.co.kr/product/30048/51/cover500/8936438832_2.jpg",
+        "description": "김유정문학상 심훈문학대상 이효석문학상 등을 수상하며 문학성을 두루 입증받은 ‘리얼리스트’ 정지아가 무려 32년 만에 장편소설을 발표했다. 역사의 상흔과 가족의 사랑을 엮어낸 대작을 선보임으로써 선 굵은 ...",
+        "pages": 268,
+        "sales_point": 57435,
+        "rank_now": null,
+        "best_record": null,
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=300485187",
+        "checked_at": "2026-10-20 14:52",
+        "why": "아버지 장례식장 사흘, 웃다가 끝내 터지는 눈물",
+        "summary": "김유정문학상 등을 받은 리얼리스트 작가 정지아가 32년 만에 발표한 장편소설이에요.\n역사의 상흔과 가족의 사랑을 엮어낸 작품이에요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "248956900",
+        "title": "천 개의 파랑",
+        "author": "천선란",
+        "publisher": "허블",
+        "pub_date": "2020-08-19",
+        "field": "소설/시/희곡 > 과학소설(SF)",
+        "cover": "https://image.aladin.co.kr/product/24895/69/cover500/k882632470_2.jpg",
+        "description": "한국과학문학상 장편 대상 수상작. 2019년 첫 장편소설 <무너진 다리>로 SF 팬들에게 눈도장을 찍었고, 2020년 7월, 소설집 <어떤 물질의 사랑>을 통해 우리 SF의 대세로 굳건히 자리 잡은 천선란의 작...",
+        "pages": 376,
+        "sales_point": 43857,
+        "rank_now": "과학소설(SF) 주간 5위",
+        "best_record": "종합 top100 10주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=248956900",
+        "checked_at": "2026-10-20 14:52",
+        "why": "폐기 직전 로봇 기수와 경주마, 조용히 무너지는 감동",
+        "summary": "한국과학문학상 장편 대상 수상작이에요.\n<무너진 다리>, <어떤 물질의 사랑>으로 한국 SF의 대세로 자리 잡은 천선란의 작품이에요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "89928183",
+        "title": "숨결이 바람 될 때",
+        "author": "폴 칼라니티, Paul Kalanithi",
+        "publisher": "흐름출판",
+        "pub_date": "2016-08-19",
+        "field": "에세이 > 외국에세이",
+        "cover": "https://image.aladin.co.kr/product/8992/81/cover500/8965961955_1.jpg",
+        "description": "신경외과 의사로서 치명적인 뇌 손상 환자들을 치료하며 죽음과 싸우다가 자신도 폐암 말기 판정을 받고 죽음을 마주하게 된 서른여섯 젊은 의사 폴 칼라니티의 마지막 2년의 기록. 출간 즉시 아마존과 「뉴욕타임스...",
+        "pages": 284,
+        "sales_point": 34985,
+        "rank_now": null,
+        "best_record": null,
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=89928183",
+        "checked_at": "2026-10-20 14:52",
+        "why": "폐암 판정 받은 젊은 신경외과 의사의 마지막 기록",
+        "summary": "신경외과 의사 폴 칼라니티는 뇌 손상 환자들을 치료하다가 자신도 폐암 말기 판정을 받았어요.\n이 책은 서른여섯 살에 죽음을 마주한 그의 마지막 2년을 기록했어요.\n출간 즉시 아마존과 「뉴욕타임스」에서 주목받았어요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "322940527",
+        "title": "여름을 한 입 베어 물었더니",
+        "author": "이꽃님",
+        "publisher": "문학동네",
+        "pub_date": "2023-08-18",
+        "field": "청소년 > 청소년 문학",
+        "cover": "https://image.aladin.co.kr/product/32294/5/cover500/8954694578_1.jpg",
+        "description": "문학동네 청소년 66권. 『세계를 건너 너에게 갈게』로 20만 독자, 『죽이고 싶은 아이』로 10만 독자를 울고 웃게 한 청소년문학 최고의 페이지터너 이꽃님 작가가 이번에는 가슴 설레는 첫사랑 이야기로 독자들을 ...",
+        "pages": 192,
+        "sales_point": 31914,
+        "rank_now": "청소년 주간 60위",
+        "best_record": "종합 top100 7주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=322940527",
+        "checked_at": "2026-10-20 14:52",
+        "why": "마음이 들리는 소년과 소녀의 비밀, 청소년 눈물 베스트",
+        "summary": "문학동네 청소년 66권이에요.\n『세계를 건너 너에게 갈게』, 『죽이고 싶은 아이』의 작가 이꽃님이 쓴 가슴 설레는 첫사랑 이야기예요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "6946832",
+        "title": "나의 라임 오렌지나무",
+        "author": "J.M. 바스콘셀로스, Jose Mauro De Vasconcelos",
+        "publisher": "동녘",
+        "pub_date": "2003-09-05",
+        "field": "소설/시/희곡 > 스페인/중남미소설",
+        "cover": "https://image.aladin.co.kr/product/694/68/cover500/8972976199_2.jpg",
+        "description": "우리 나라 독자들에게 많은 사랑을 받아온 가 완역본 보급판으로 재출간됐다. 100여 곳이 넘는 기존 책의 오역을 바로잡았고, 공모를 통해 선정한 삽화가의 그림을 함께 실었다.",
+        "pages": 301,
+        "sales_point": 31145,
+        "rank_now": "스페인/중남미소설 주간 11위",
+        "best_record": "종합 top100 7주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=6946832",
+        "checked_at": "2026-10-20 14:52",
+        "why": "다섯 살 제제의 슬픈 성장, 다시 읽어도 우는 명작",
+        "summary": "오래 사랑받아 온 작품을 완역본 보급판으로 다시 펴냈어요.\n기존 책의 오역 100여 곳을 바로잡았어요.\n공모로 뽑은 삽화가의 그림도 함께 실었어요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "312824974",
+        "title": "오베라는 남자",
+        "author": "프레드릭 배크만, Fredrik Backman",
+        "publisher": "다산책방",
+        "pub_date": "2023-03-09",
+        "field": "소설/시/희곡 > 세계의 소설",
+        "cover": "https://image.aladin.co.kr/product/31282/49/cover500/k162832578_2.jpg",
+        "description": "한 사람의 인생이 끝나기도 전에 그 사람이 구식이 되어버리는 세상과 자기 손으로 타이어 하나 갈아 끼우지 못하는 바보 같은 사람들을 도저히 이해할 수 없어 외톨이가 되기를 자처하는 남자 오베. 그러나 그는 도...",
+        "pages": 452,
+        "sales_point": 30529,
+        "rank_now": "북유럽소설 주간 6위",
+        "best_record": "소설/시/희곡 top100 4주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=312824974",
+        "checked_at": "2026-10-20 14:52",
+        "why": "까칠한 홀아비의 비밀, 웃기다 울리는 세계적 베스트",
+        "summary": "빠르게 변하는 세상과 사람들을 이해하지 못해 스스로 외톨이가 된 남자 오베의 이야기예요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "315552626",
+        "title": "맡겨진 소녀",
+        "author": "클레어 키건, Claire Keegan",
+        "publisher": "다산책방",
+        "pub_date": "2023-04-26",
+        "field": "소설/시/희곡 > 세계의 소설",
+        "cover": "https://image.aladin.co.kr/product/31555/26/cover500/k832832758_1.jpg",
+        "description": "2009년 데이비 번스 문학상을 수상한 작품으로, 애정 없는 부모로부터 낯선 친척 집에 맡겨진 한 소녀의 이야기를 그린다. 이 책을 원작으로 하는 영화 「말없는 소녀」 또한 세계 관객들의 열렬한 호평을 받으며 올...",
+        "pages": 104,
+        "sales_point": 28999,
+        "rank_now": "아일랜드소설 주간 9위",
+        "best_record": "종합 top100 31주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=315552626",
+        "checked_at": "2026-10-20 14:52",
+        "why": "낯선 집에 맡겨진 소녀의 여름, 얇은데 마지막에 울컥",
+        "summary": "2009년 데이비 번스 문학상 수상작이에요.\n애정 없는 부모 때문에 낯선 친척 집에 맡겨진 한 소녀의 이야기예요.\n이 책이 원작인 영화 「말없는 소녀」도 세계 관객들에게 호평을 받았어요.",
+        "pilotic": false,
+        "used": false
+      },
+      {
+        "key": "336034996",
+        "title": "가시고기",
+        "author": "조창인",
+        "publisher": "산지",
+        "pub_date": "2024-02-20",
+        "field": "소설/시/희곡 > 한국소설",
+        "cover": "https://image.aladin.co.kr/product/33603/49/cover500/k152939703_1.jpg",
+        "description": "조창인 소설. 이미 300만 부 이상 팔려 독자들의 사랑을 받은 초베스트셀러이다. 작가는 달라진 시대에 맞는 모습으로 아버지의 숭고한 사랑을 그려내고 싶었고, 일부 내용을 보충하고 수정하여 증보개정판으로 선보...",
+        "pages": 360,
+        "sales_point": 15224,
+        "rank_now": "가족문학 주간 1위",
+        "best_record": "소설/시/희곡 top100 2주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336034996",
+        "checked_at": "2026-10-20 14:53",
+        "why": "직접 추가",
+        "summary": "조창인의 소설로, 300만 부 넘게 팔리며 사랑받은 초베스트셀러예요.\n아버지의 숭고한 사랑을 그린 작품이에요.\n작가가 달라진 시대에 맞게 일부 내용을 보충하고 고쳐 증보개정판으로 냈어요.",
+        "pilotic": false,
+        "used": false,
+        "cover_file": "02_가시고기.jpg"
+      },
+      {
+        "key": "338505472",
+        "title": "미 비포 유",
+        "author": "조조 모예스, Jojo Moyes",
+        "publisher": "다산책방",
+        "pub_date": "2024-04-25",
+        "field": "소설/시/희곡 > 영미소설",
+        "cover": "https://image.aladin.co.kr/product/33850/54/cover500/k082930104_2.jpg",
+        "description": "2014년 초판이 출간된 이후 쇄를 거듭하며 사랑받은 소설 『미 비포 유』가 10년 만에 전면 개정판으로 돌아왔다. 럭셔리 브랜드와의 협업, 더현대 사진전 11만 관람객을 동원한 봄을 찍는 포토그래퍼 ‘테레사 프레...",
+        "pages": 576,
+        "sales_point": 6710,
+        "rank_now": "로맨스소설 주간 40위",
+        "best_record": "소설/시/희곡 top100 7주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338505472",
+        "checked_at": "2026-10-20 14:53",
+        "why": "직접 추가",
+        "summary": "2014년 초판 출간 뒤 쇄를 거듭하며 사랑받은 소설 『미 비포 유』예요.\n10년 만에 전면 개정판으로 다시 나왔어요.\n봄을 찍는 포토그래퍼로 알려진 테레사 프레이타스와 관련된 개정판이에요.",
+        "pilotic": false,
+        "used": false,
+        "cover_file": "03_미비포유.jpg"
+      },
+      {
+        "key": "330811810",
+        "title": "수족관",
+        "author": "유래혁",
+        "publisher": "포스터샵",
+        "pub_date": "2023-12-29",
+        "field": "소설/시/희곡 > 한국소설",
+        "cover": "https://image.aladin.co.kr/product/33081/18/cover500/k582937507_1.jpg",
+        "description": "유래혁 소설. 보육 시설에서 자라난 인물 ‘류이치’가, 먼저 보육 시설에서 도망쳐나온 인물 ‘아카리’를 만나 겪게 되는 일들을 그려낸다. 이 두 인물은 자신들이 가진 뿌리 깊은 과거와 상처, 그 이야기가 만들...",
+        "pages": 376,
+        "sales_point": 151816,
+        "rank_now": "소설/시/희곡 주간 14위",
+        "best_record": "종합 top10 10주",
+        "status": "판매 중",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330811810",
+        "checked_at": "2026-10-20 14:56",
+        "why": "직접 추가",
+        "summary": "유래혁 소설이에요.\n보육 시설에서 자란 류이치가 먼저 시설을 도망쳐 나온 아카리를 만나 겪는 일들을 그려요.\n두 사람이 품은 뿌리 깊은 과거와 상처의 이야기가 담겨 있어요.",
+        "pilotic": false,
+        "used": true,
+        "cover_file": "04_수족관.jpg"
+      }
+    ],
+    "selected": [
+      "263027170",
+      "336034996",
+      "338505472",
+      "330811810"
+    ],
+    "rounds": 1,
+    "pilotic": false,
+    "dropped": 0
+  },
+  "cards": {
+    "slides": [
+      {
+        "type": "thumb",
+        "line1": "밖에서 읽지마...",
+        "line2": "눈물샘 고장 나는 책 4",
+        "c1": "#FFFFFF",
+        "c2": "#D4FEBE",
+        "chip1": "북케터 밈",
+        "chip2": "책 추천",
+        "size": 1,
+        "dy": 0,
+        "bg": "bg_up_2026-10-20_16-10-09.png",
+        "zoom": 1,
+        "px": 50,
+        "py": 100,
+        "shade": 1
+      },
+      {
+        "type": "book",
+        "key": "263027170",
+        "title": "긴긴밤",
+        "tags": "#동화 #눈물버튼 #문학동네어린이문학상대상",
+        "lines": [
+          {
+            "text": "지구에 마지막 하나 남은 흰바위코뿔소 노든,",
+            "color": "흰색"
+          },
+          {
+            "text": "소중한 이들을 다 잃고 혼자 남았어요.",
+            "color": "흰색"
+          },
+          {
+            "text": "근데 그 품에서 버려진 알 하나가 깨어나요.",
+            "color": "민트"
+          },
+          {
+            "text": "본 적도 없는 바다를 찾아 둘이 걷는 긴긴밤...",
+            "color": "흰색"
+          }
+        ],
+        "cover": "01_긴긴밤.jpg",
+        "size": 1,
+        "dy": 0
+      },
+      {
+        "type": "book",
+        "key": "336034996",
+        "title": "가시고기",
+        "tags": "#한국소설 #부성애 #300만부베스트셀러",
+        "lines": [
+          {
+            "text": "아빠 정호연에게 삶의 전부는 아들 하나예요.",
+            "color": "흰색"
+          },
+          {
+            "text": "근데 그 아들이 백혈병에 걸렸고,",
+            "color": "민트"
+          },
+          {
+            "text": "골수이식 말고는 더 이상 희망이 없대요.",
+            "color": "민트"
+          },
+          {
+            "text": "아들을 살릴 수만 있다면 내 몸도 괜찮다는 아빠,",
+            "color": "흰색"
+          },
+          {
+            "text": "그가 끝내 내린 선택은..?",
+            "color": "흰색"
+          }
+        ],
+        "cover": "02_가시고기.jpg",
+        "size": 1,
+        "dy": 0
+      },
+      {
+        "type": "book",
+        "key": "338505472",
+        "title": "미 비포 유",
+        "tags": "#영미소설 #로맨스 #BTS지민추천",
+        "lines": [
+          {
+            "text": "6년 일한 카페가 하루아침에 문 닫아 백수가 된 루이자,",
+            "color": "흰색"
+          },
+          {
+            "text": "전신마비 남자 윌의 6개월 간병인이 돼요.",
+            "color": "흰색"
+          },
+          {
+            "text": "근데 그녀에게 더 넓은 세상을 보여주던 윌은",
+            "color": "민트"
+          },
+          {
+            "text": "정작 자기 삶의 마지막을 준비하고 있었어요.",
+            "color": "민트"
+          },
+          {
+            "text": "\"그냥… 내 곁에 살아주면 안 돼요?\"",
+            "color": "흰색"
+          }
+        ],
+        "cover": "03_미비포유.jpg",
+        "size": 1,
+        "dy": 0
+      },
+      {
+        "type": "cta",
+        "main": "북케터밈을 팔로우하고,",
+        "sub": "분야별 추천 도서를 빠르게 챙겨가세요!"
+      }
+    ],
+    "body_bg": "bg_up_2026-10-20_16-10-09.png",
+    "body_opacity": 0.27,
+    "body_zoom": 1,
+    "body_px": 50,
+    "body_py": 50,
+    "bgs": [
+      {
+        "file": "bg_up_2026-10-20_16-10-09.png",
+        "pin": null,
+        "query": "직접 올림"
+      },
+      {
+        "file": "bg_up_2026-10-20_16-09-41.jpg",
+        "pin": null,
+        "query": "직접 올림"
+      },
+      {
+        "file": "bg_2026-10-20_14-56-17_00.jpg",
+        "pin": "",
+        "w": null,
+        "h": null,
+        "query": "reading in bed at night aesthetic photo",
+        "alt": "핀",
+        "score": 5,
+        "why": "구겨진 이불 위 책과 촛불. 실제 사진의 노이즈가 있고 자연스러운 감성이 '밖에서 못 읽는' 카피에 딱 맞음"
+      },
+      {
+        "file": "bg_2026-10-20_14-56-18_01.jpg",
+        "pin": "",
+        "w": null,
+        "h": null,
+        "query": "reading in bed at night aesthetic photo",
+        "alt": "핀",
+        "score": 4,
+        "why": "밤 침대에서 펼친 책을 폰으로 찍은 실제 사진. 감정에 젖는 분위기가 카피와 잘 맞음"
+      },
+      {
+        "file": "bg_2026-10-20_14-56-18_02.jpg",
+        "pin": "",
+        "w": null,
+        "h": null,
+        "query": "감성 사진 새벽 침대 독서",
+        "alt": "핀",
+        "score": 4,
+        "why": "흐린 날 창가와 책. 실제 폰 사진 질감이 있고 차분하고 우울한 무드가 카피와 어울림"
+      },
+      {
+        "file": "bg_2026-10-20_14-56-18_03.jpg",
+        "pin": "",
+        "w": null,
+        "h": null,
+        "query": "tissue and open book cozy film photo",
+        "alt": "핀",
+        "score": 4,
+        "why": "흰 이불 위 책과 단풍잎. 자연광 실제 사진이고 가을 감성"
+      },
+      {
+        "file": "bg_2026-10-20_14-56-18_04.jpg",
+        "pin": "",
+        "w": null,
+        "h": null,
+        "query": "reading in bed at night aesthetic photo",
+        "alt": "핀",
+        "score": 3,
+        "why": "어두운 침대 위 펼친 책. 실제 사진이지만 너무 어두워 썸네일로는 아쉬움"
+      },
+      {
+        "file": "bg_2026-10-20_14-56-19_05.jpg",
+        "pin": "",
+        "w": null,
+        "h": null,
+        "query": "감성 사진 새벽 침대 독서",
+        "alt": "핀",
+        "score": 3,
+        "why": "노을 지는 창가와 고양이 실루엣의 실제 사진. 책이 없어서 카피 연결은 약함"
+      },
+      {
+        "file": "bg_2026-10-20_14-56-19_06.jpg",
+        "pin": "",
+        "w": null,
+        "h": null,
+        "query": "tissue and open book cozy film photo",
+        "alt": "핀",
+        "score": 3,
+        "why": "흰 침구 위 책. 실제 사진이지만 단조로워 감정선이 약함"
+      }
+    ],
+    "caption": "📚 카페에서 펼쳤다가 휴지 찾느라 바빴던, 집에서만 읽어야 하는 책 3\n\n읽다가 몇 번이나 책을 덮었어요.. 어디서 무너지는지, 어떤 결인지 정리해드릴게요🫶🏻\n\n1️⃣ 긴긴밤 — 루리\n어린이 책이라고 얕보면 안 돼요.\n144쪽짜리 동화인데, 마지막 장에서 저는 그냥 무너졌어요.\n그림이 이야기만큼 큰 몫을 해서 꼭 종이책으로 보셨으면 해요.\n\n2️⃣ 가시고기 — 조창인\n첫 문장이 \"아빠는 멍텅구리입니다.\"예요.\n처음엔 웃으며 읽은 이 한 줄이 뒤로 갈수록 다르게 읽혀요.\n짧고 담백한 문장이라 오히려 더 아프더라구요.\n\n3️⃣ 미 비포 유 — 조조 모예스 (옮긴이 김선형)\n웃기게 시작해서 울면서 끝나는 로맨스예요.\n루이자랑 윌 티키타카에 웃다가 어느 순간 페이지가 안 넘어가요.\n576쪽인데 이상하게 짧게 느껴져요.\n\n📌 오늘 밤엔 휴지 한 통 옆에 두고 펼치세요 🤍",
+    "keywords": [
+      "reading in bed at night aesthetic photo",
+      "film photography girl reading by rainy window",
+      "감성 사진 새벽 침대 독서",
+      "tissue and open book cozy film photo",
+      "필름 사진 비 오는 날 창가 책"
+    ],
+    "range": [
+      89,
+      124
+    ],
+    "rev": 31,
+    "factcheck": {
+      "at": "2026-10-20_14-55-14",
+      "books": [
+        {
+          "key": "263027170",
+          "title": "긴긴밤",
+          "issues": [],
+          "changed": false
+        },
+        {
+          "key": "336034996",
+          "title": "가시고기",
+          "issues": [],
+          "changed": false
+        },
+        {
+          "key": "338505472",
+          "title": "미 비포 유",
+          "issues": [
+            {
+              "where": "카드",
+              "text": "6년 일한 카페에서 하루아침에 잘린 루이자,",
+              "problem": "틀림(작은 왜곡). 루이자는 해고된 게 아니라 카페가 문을 닫아서 일자리를 잃었어요. '잘린'이라고 하면 해고된 것처럼 읽혀요.",
+              "evidence": "알라딘 출판사 제공 책소개(https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338505472): '동네의 유일한 카페에서 6년째 일했다. 갑작스러운 카페 폐업 통보를 받기 전까지는… 하루아침에 백수가 된 루이자'"
+            }
+          ],
+          "changed": true,
+          "before": {
+            "tags": "#영미소설 #로맨스 #BTS지민추천",
+            "lines": [
+              {
+                "text": "6년 일한 카페에서 하루아침에 잘린 루이자,",
+                "color": "흰색"
+              },
+              {
+                "text": "전신마비 남자 윌의 6개월 간병인이 돼요.",
+                "color": "흰색"
+              },
+              {
+                "text": "근데 그녀에게 더 넓은 세상을 보여주던 윌은",
+                "color": "민트"
+              },
+              {
+                "text": "정작 자기 삶의 마지막을 준비하고 있었어요.",
+                "color": "민트"
+              },
+              {
+                "text": "\"그냥… 내 곁에 살아주면 안 돼요?\"",
+                "color": "흰색"
+              }
+            ]
+          }
+        }
+      ],
+      "caption": [],
+      "copy_fit": []
+    }
+  },
+  "export": {
+    "folder": "04_완성본",
+    "files": [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.png"
+    ],
+    "at": "2026-10-20_16-16-58"
+  },
+  "done": true
+}

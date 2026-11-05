@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>render</title>
+<link rel="stylesheet" href="/static/cardtpl.css">
+<style>html,body{margin:0;padding:0;background:#000;width:1080px;height:1350px;overflow:hidden}</style>
+</head><body>
+<script src="/static/cardtpl.js"></script>
+<script>
+(async () => {
+  const q = new URLSearchParams(location.search);
+  const wid = q.get('wid'), i = Number(q.get('i'));
+  const st = await (await fetch(`/api/works/${encodeURIComponent(wid)}`)).json();
+  const img = (sub, name) => `/api/works/${encodeURIComponent(wid)}/img/${encodeURIComponent(sub)}/${encodeURIComponent(name)}`;
+  // 글꼴을 먼저 불러와야 줄 맞춤(fitLine)이 실제 글꼴 너비로 계산된다
+  await Promise.all(['100', '300', '600', '700'].map(w => document.fonts.load(`${w} 40px PretendardC`, '가A')));
+  const {el, ready} = renderCard(st.cards.slides[i], i, st.cards, img);
+  document.body.appendChild(el);
+  await ready;
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+  window.__ready = true;
+})();
+</script>
+</body></html>
